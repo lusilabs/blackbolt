@@ -1,0 +1,39 @@
+{
+  "name": "svelte-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --watch",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "zip": "vite build & zip -r dist.zip dist"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.15",
+    "@iconify/json": "^2.2.50",
+    "@sveltejs/vite-plugin-svelte": "^2.0.4",
+    "@tsconfig/svelte": "^3.0.0",
+    "@types/chrome": "^0.0.231",
+    "@types/lodash": "^4.14.194",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.38.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.7",
+    "svelte": "^3.55.1",
+    "svelte-check": "^2.10.3",
+    "tailwindcss": "^3.3.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.3",
+    "unplugin-icons": "^0.16.1",
+    "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "rxjs": "^7.8.0"
+  }
+}

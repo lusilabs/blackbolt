@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Kbd kraken",
+  "version": "0.1.1",
+  "description": "Keyboard analytics.",
+  "icons": {
+    "16": "icons/Icon-16.png",
+    "48": "icons/Icon-48.png",
+    "72": "icons/Icon-72.png",
+    "128": "icons/Icon-128.png",
+    "144": "icons/Icon-144.png",
+    "512": "icons/Icon-512.png"
+  },
+  "action": {
+    "default_title": "Kraken",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "identity",
+    "identity.email",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "src/content.ts"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "src/content.ts" ],
+      "matches": [ "https://*/*" ]
+    }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs/fE0CAUjnNlUqwlQU1tjtF/LHhi8jkcfvWxP7NniKXZWy+VZ2zhu2KoMAgDOdpOu8CM72ntwWjcSzXAy5sYTa4IhzDURWgvIC57PCoq1SIqUukoEeWccUXMgmHZQ02n6z6z0honi6Yb8CUlOw5K19pniOuUmJX/8WIHEnABEbFMZ0cgXzpxPoIrZ+a0lAWK5sYlUbHXPDBEobnAPeoe7K0wnxwH80TIULA7h7wbNBntHLGWYUUbzEQNQB2idPCf2MAzbAzkwx58dCG4p60/ORmhEyFyfvdKlaiEoK0z9pDjkGrTcsjTRhnPlhtOHeC0wKLGAJaoUOwp1+aD+isWXwIDAQAB"
+}
