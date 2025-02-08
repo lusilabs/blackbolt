@@ -1,2 +1,5 @@
 # README
-Asks for mic/camera permissions in a chrome extension.
+
+This is a chrome extension that does a hack to ask for the mic/camera permission and is able to record.
+Originally intended to detect anomalies in industrial machinery audio and video.
+
